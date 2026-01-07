@@ -1,0 +1,13 @@
+# Competitive Programming Helper
+.cph/
+
+# Python
+__pycache__/
+*.pyc
+
+# C/C++
+*.out
+*.exe
+
+# Editor
+.vscode/
