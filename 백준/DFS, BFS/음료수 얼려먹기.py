@@ -1,6 +1,6 @@
 def dfs(x, y):
     # 주어진 범위를 벗어나면 즉시 종료
-    if x <= -1 or x >= n or y <= -1 or y >= n:
+    if x <= -1 or y <= -1 or x >= n or y >= n:
         return False
     # 현재 노드를 아직 방문하지 않았다면
     if graph[x][y] == 0:
