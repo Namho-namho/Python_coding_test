@@ -35,3 +35,20 @@ def quick_sort1(array, start, end):
             array[left], array[right] = array[right], array[left]
     quick_sort1(array, start, right - 1)
     quick_sort1(array, right + 1, end)
+# 2
+def quick_sort(array, low, high):
+    if (high > low):
+        pivotpoint = partition(array, low, high)
+        quick_sort(array, low, pivotpoint - 1)
+        quick_sort(array, pivotpoint + 1, high)
+
+def partition(array, low, high):
+    pivotitem = array[low]
+    j = low
+    for i in range(low + 1, high + 1):
+        if array[i] < pivotitem:
+            j += 1
+            array[i], array[j] = array[j], array[i]
+    pivotpoint = j
+    array[low], array[pivotpoint] = array[pivotpoint], array[low]
+    return pivotpoint
