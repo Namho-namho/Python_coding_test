@@ -52,3 +52,11 @@ def partition(array, low, high):
     pivotpoint = j
     array[low], array[pivotpoint] = array[pivotpoint], array[low]
     return pivotpoint
+
+# 계수 정렬
+count = [0] * (max(array) + 1)
+for i in range(len(array)):
+    count[array[i]] += 1
+for i in range(len(count)):
+    for j in range(count[i]):
+        print(i, end=" ")
