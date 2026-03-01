@@ -6,7 +6,6 @@ INF = int(1e9)
 v, e = map(int, input().split())
 start = int(input())
 graph = [[] for _ in range(v + 1)]
-visited = [False] * (v + 1)
 distance = [INF] * (v + 1)
 
 for _ in range(e):
